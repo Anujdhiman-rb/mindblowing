@@ -1,0 +1,11 @@
+<h1> <center>Welcome to blog site </center></h1>
+<marquee> <span style="color:green;"> Developed by Anuj Dhiman  </span></marquee> 
+<div>
+	<div>
+		<%= image_tag  "/assets/extra/krishna.jpg" %>
+	</div>
+</div>
+<br />
+<%=  link_to "My Blog", posts_path  %>
+<% debugger %>
+<%=  link_to "Go to Status", "/#{session[:user]}/home/active"  %>

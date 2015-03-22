@@ -1,0 +1,25 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+     	<%= f.error_messages :header_message => "Invalid post dude!",
+  :message => "You'll need to fix the following fields:",
+  :header_tag => :h5 %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :context %><br />
+    <%= f.text_area :context %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
