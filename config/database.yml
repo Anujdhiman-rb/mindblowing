@@ -11,12 +11,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  reconnect: false
   database: tesy
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,19 +22,15 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  reconnect: false
   database: tesy
   pool: 5
   username: root
   password:
-  socket: /var/run/mysqld/mysqld.sock
-
+  
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: blog_production
+  adapter: postgresql
+  encoding: unicode
+  database: prod_data
   pool: 5
-  username: root
+  username: blog
   password:
-  socket: /var/run/mysqld/mysqld.sock
