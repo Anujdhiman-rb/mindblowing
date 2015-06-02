@@ -9,7 +9,8 @@ Blog::Application.routes.draw do
   
   scope ":name" do
     match 'home/:status' =>'home#status'
-  end    
+  end   
+  match 'home/test' =>'home#test' , :via=>[:get , :post] 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

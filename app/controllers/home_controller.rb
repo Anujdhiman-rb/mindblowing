@@ -1,10 +1,13 @@
 class HomeController < ApplicationController
   def index
-    
+    session[:user] = "Anuj"
   end
+  
   def status
-  debugger
-  flash[:user]= params[:name] unless params[:name].nil? 
-  puts "ddvd"
-  end
+   head :bad_request
+   end
+   
+   def test
+    
+   end 
 end

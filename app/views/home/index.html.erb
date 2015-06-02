@@ -1,10 +1,13 @@
-<h1> <center>Welcome to blog site </center></h1>
-<marquee> <span style="color:green;"> Developed by Anuj Dhiman  </span></marquee> 
-<div>
-	<div>
-		<%= image_tag  "/assets/extra/krishna.jpg" %>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+			<img alt="140x140" src="/assets/extra/krishna.jpg" class="img-thumbnail" />
+		</div>
+		<div class="col-md-4 column">
+			 <%=  link_to "My Blog", posts_path  %>
+		</div>
+		<div class="col-md-4 column">
+			<%=  link_to "Go to Status", "/#{session[:user]}/home/active"   %>
+		</div>
 	</div>
 </div>
-<br />
-<%=  link_to "My Blog", posts_path  %>
-<%=  link_to "Go to Status", "/#{session[:user]}/home/active"  %>
