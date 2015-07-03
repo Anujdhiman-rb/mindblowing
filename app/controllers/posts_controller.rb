@@ -37,6 +37,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+  debugger 
     @post = Post.new(params[:post])
     respond_to do |format|
       if @post.save
@@ -53,6 +54,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
+  debugger 
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }

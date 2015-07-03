@@ -44,3 +44,4 @@ gem 'rails_12factor', group: :production
 gem 'debugger' , :group=> :development
 
 ruby '1.9.3'
+gem 'carrierwave'

@@ -1,7 +1,17 @@
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-8 column">
-			<img alt="140x140" src="/assets/extra/krishna.jpg" class="img-thumbnail" />
+			<%= form_tag({:action => :upload}, :multipart => true) do %>
+			  <%= label_tag "Upload a File:" %>	
+			  <%= file_field_tag 'picture' %>
+			  <%= submit_tag "Upload" %>	
+			<% end %>
+			<%= image_tag @user.avatar.url %>
+		</div>
+		<div class="col-md-4 column">
+			 <% if flash[:notice] %>
+		     	<p class="alert alert-success"><%= flash[:notice] %></p>
+		     <% end %>
 		</div>
 		<div class="col-md-4 column">
 			 <%=  link_to "My Blog", posts_path  %>
@@ -9,5 +19,6 @@
 		<div class="col-md-4 column">
 			<%=  link_to "Go to Status", "/#{session[:user]}/home/active"   %>
 		</div>
+		
 	</div>
 </div>
