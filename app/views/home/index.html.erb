@@ -6,7 +6,7 @@
 			  <%= file_field_tag 'picture' %>
 			  <%= submit_tag "Upload" %>	
 			<% end %>
-			<%= image_tag @user.avatar.url %>
+			<%= image_tag @user.avatar.url , :alt=>"Image not found" %>
 		</div>
 		<div class="col-md-4 column">
 			 <% if flash[:notice] %>
